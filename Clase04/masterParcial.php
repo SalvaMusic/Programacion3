@@ -2,6 +2,8 @@
 
     include "./Alumno.php";
     include "./guardar.php";
+    require "./php-json-file-decode/json-file-decode.class.php"
+
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         switch($_POST['caso'])
@@ -20,8 +22,11 @@
     {
         switch($_GET['caso'])
         {  
-            case ('leer'):
+            case ('leerListado'):
                 Guardar::traerListado("./arch.txt");
+                break;
+            case ('leer'):
+
                 break;
             default:
                 echo "caso erroneo";

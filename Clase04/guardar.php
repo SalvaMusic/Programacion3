@@ -33,6 +33,8 @@
             print("el archivo se guardo como ".$destino);
         }
 
+        public static function
+
         public static function traerListado($archivo)
         {
             $ar = fopen($archivo, "r");
