@@ -33,14 +33,17 @@
             print("el archivo se guardo como ".$destino);
         }
 
-        public static function
+        public static function leer($archivo)
+        {
+            
+        }
 
         public static function traerListado($archivo)
         {
             $ar = fopen($archivo, "r");
             if ($ar !=NULL)
             {
-                var_dump(fread($ar, filesize($archivo)));
+                return fread($ar, filesize($archivo));
             }
 
             fclose($ar);

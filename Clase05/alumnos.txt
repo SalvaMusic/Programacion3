@@ -1,7 +1,6 @@
-{"nombre":"Salvador","apellido":"Pedrozo","legajo":"124"}
-{"nombre":"Jorge","apellido":"Lopez","legajo":"112"}
 {"nombre":"Mario","apellido":"Kempes","legajo":"011"}
 {"nombre":"Mario","apellido":"Kempes","legajo":"011"}
 {"nombre":"Mario","apellido":"Kempes","legajo":"011"}
 {"nombre":"Mario","apellido":"Kempes","legajo":"011"}
-{"nombre":"Mario","apellido":"Kempes","legajo":"011"}
+{"nombre":"Mario","apellido":"Kempes","legajo":"52"}
+{"nombre":"Jose","apellido":"Gutierres","legajo":"88"}

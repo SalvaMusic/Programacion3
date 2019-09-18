@@ -1,14 +1,17 @@
 <?php
-include "./clases/persona.php";
-    class Alumno extends Persona
+    class Alumno
     {
-        public function mostrar ()
-        {
-            // echo "Nombre: ".$this->nom;
-            // echo "<br/>";
-            // echo "Apellido: ".$this->ape;
+        public $nombre;
+        public $apellido;
+        public $legajo;
 
-            echo json_encode($this);
+        public function __construct($nombre, $apellido, $legajo)
+        {
+            $this->nombre = $nombre;
+            $this->apellido = $apellido;
+            $this->legajo = $legajo;
         }
+        
     }
+
 ?>
