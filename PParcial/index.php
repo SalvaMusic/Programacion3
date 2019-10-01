@@ -13,7 +13,7 @@
 
             $veh = new Vehiculo($datos['marca'],$datos['modelo'], $datos['patente'], $datos['precio']);
 
-            if(!Guardar::guardarArchivo($veh, "./vehiculos.txt"))
+            if(!Guardar::guardarArchivoValidar($veh, "./vehiculos.txt"))
             {
                 $response->getbody()->write("Vehiculo cargado con exito!");
             }
@@ -21,12 +21,39 @@
             return $response;
         });
         
-        
-        $this->get('/consultarVehiculo', function ( $request,  $response, $args) {
-            echo Guardar::traerListado("./vehiculos.txt");
+        //ejercicios/PParcial/vehiculos/consultarVehiculo/Fiat
+        $this->get('/consultarVehiculo/{marca}', function ( $request,  $response, $args)  {
+            $datos = $args['marca'];
 
+            Guardar::consultarVehiculo($datos, "./vehiculos.txt");
+               
             return $response;
         });
+        
+        /*$this->get('/consultarVehiculo', function ( $request,  $response, $args) {
+            $datos = $request->getParsedBody();
+
+            $veh = new Vehiculo($datos['marca'],$datos['modelo'], $datos['patente'], $datos['precio']);
+
+            if($datos['marca'] =! NULL)
+            {
+                var_dump($veh);
+                if(Guardar::consultarVehiculo($veh->marca, "./vehiculos.txt"))
+                {
+                    $veh->mostrar();
+                }
+
+            }else if ($datos['modelo'] != NULL)
+            {
+
+            }else if ($datos['patente']!= NULL)
+            {
+
+            }
+
+            return $response;
+        });*/
+
 
         $this->post('/cargarTipoServicio', function ( $request,  $response, $args) {
 

@@ -12,6 +12,12 @@
             $this->modelo = $modelo;
             $this->patente = $patente;
             $this->precio = $precio;
+            
+        }
+
+        public function mostrar()
+        {
+            //var_dump($this);
         }
         
     }
