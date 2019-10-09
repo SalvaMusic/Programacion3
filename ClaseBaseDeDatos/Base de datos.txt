@@ -1,3 +1,6 @@
+http://localhost:8080/phpmyadmin/
+-------------------------
+
 Relacionar 2 tablas
 
 SELECT a.id, a.nombre, a.legajo, m.nombre
