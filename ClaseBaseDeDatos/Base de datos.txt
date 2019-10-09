@@ -1,0 +1,29 @@
+Relacionar 2 tablas
+
+SELECT a.id, a.nombre, a.legajo, m.nombre
+FROM `alumnos` a 
+INNER JOIN materias m on a.materia = m.id
+
+------------------------------
+
+Relacionar 2 tablas opr medio de otra tabla conectora
+
+SELECT a.id, a.nombre, a.legajo, m.nombre
+FROM `alumnos_materias` as a_m 
+INNER JOIN materias m on a_m.id_materia = m.id
+INNER JOIN alumnos a on a_m.id_alumno = a.id
+ORDER BY id_alumno
+
+---------------------------------------
+
+Ejercicios
+
+1. SELECT * FROM `productos` ORDER BY p_nombre.
+
+2. SELECT * FROM `provedores` WHERE localidad = "quilmes"
+
+3. SELECT `numero`, `p_numero`, `cantidad` FROM `envios` WHERE cantidad >= 200 and cantidad <= 300
+
+4. SELECT SUM(cantidad) FROM `envios` 
+
+5. 
