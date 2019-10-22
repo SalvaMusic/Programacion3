@@ -99,7 +99,21 @@
             return NULL;
         }
 
-        public static function retXMarca($array, $marca)
+        public static function retArrayXServicio($array, $servicio)
+        {
+            $arrayAux = array();
+            for($i = 0; $i< count($array); $i++)
+            {             
+                $a = $array[$i];
+                if ($a->servicio == $servicio)
+                {
+                    array_push($arrayAux, $a); 
+                }
+            }
+            return $arrayAux;   
+        }
+
+        public static function retArrayXMarca($array, $marca)
         {
             $arrayAux = array();
             for($i = 0; $i< count($array); $i++)
@@ -110,11 +124,10 @@
                     array_push($arrayAux, $a); 
                 }
             }
-            return $arrayAux;
-            
+            return $arrayAux;   
         }
 
-        public static function retXFecha($array, $fecha)
+        public static function retArrayXFecha($array, $fecha)
         {
             $arrayAux = array();
             for($i = 0; $i< count($array); $i++)

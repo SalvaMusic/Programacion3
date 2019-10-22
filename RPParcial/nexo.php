@@ -61,7 +61,7 @@
                 if (!empty($_GET['marca']))
                 {
                     $aux = $_GET['marca'];
-                    $veh = Guardar::retXMarca(Guardar::traerlistado("./vehiculos.txt"), $aux);
+                    $veh = Guardar::retArrayXMarca(Guardar::traerlistado("./vehiculos.txt"), $aux);
                 }
                 
                 if($veh != NULL)
@@ -100,7 +100,7 @@
                 break;
             case ('turno'):
                 
-                $veh = Guardar::traerlistado("./tiposServicio.txt");
+                $veh = Guardar::traerlistado("./turnos.txt");
                 if($veh != NULL)
                 {
                     var_dump($veh);
@@ -112,7 +112,7 @@
 
                 if (!empty($_GET['fecha']))
                 {
-                    $veh = Guardar::retXFecha(Guardar::traerlistado("./turnos.txt"));
+                    $veh = Guardar::retArrayXFecha(Guardar::traerlistado("./turnos.txt"), $_GET['fecha']);
                     
                     if ($veh != NULL)
                     {
@@ -124,8 +124,7 @@
                 } 
                 if (!empty($_GET['servicio']));
                 {
-                    
-                    $veh = Guardar::traerlistado("./tiposServicio.txt");
+                    $veh = Guardar::retArrayXServicio(Guardar::traerlistado("./turnos.txt"), $_GET['servicio']);
                     if ($veh != NULL)
                     {
                         var_dump($veh);
