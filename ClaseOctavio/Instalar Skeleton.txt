@@ -1,0 +1,5 @@
+composer create-project slim/slim-skeleton nombre_de_la_app (v3)
+
+middleware
+
+https://www.tamps.cinvestav.mx/~vjsosa/clases/sd/Middleware_Recorrido.pdf
